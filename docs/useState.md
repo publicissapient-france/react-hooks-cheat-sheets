@@ -29,7 +29,7 @@ class Counter extends Component {
 ### Hook way
 
 ```JSX
-import { useState } from "React";
+import { useState } from "react";
 
 const initialCount = 0;
 function Counter() {

@@ -53,15 +53,15 @@ const contextValue = useContext(ThemeContext);
 #### [useMemo](/docs/useMemo.md)
 ```javascript
 const memoizedValue = useMemo(
-    expensiveFn(dependencies), 
-    [dependencies]
+    () => expensiveFn(dependencies), 
+    [dependencies]  
 );
 ```
 
 #### [useCallback](/docs/useCallback.md)
 ```javascript
 const memoizedCallback = useCallback(
-    () => expensiveFn(dependencies), 
+    expensiveFn(dependencies), 
     [dependencies]
 );
 ```

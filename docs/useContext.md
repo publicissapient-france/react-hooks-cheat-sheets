@@ -5,7 +5,7 @@ class Header extends React.Component {
   public render() {
     return (
       <AuthContext.Consumer>
-        {({ handleSignIn, handleSignUp, isLoggedIn}) => (
+        {({ handleLogin, isLoggedIn}) => (
           <ModalContext.Consumer>
             {({ isOpen, showModal, hideModal }) => (
               <NotificationContext.Consumer>
@@ -31,7 +31,7 @@ import { useContext } from 'react';
 
 function Header() {
 
-  const { handleSignIn, handleSignUp, isLoggedIn} = useContext(AuthContext); //
+  const { handleLogin, isLoggedIn} = useContext(AuthContext); //
   const { isOpen, showModal, hideModal } = useContext(ModalContext);
   const { notification, notify } = useContext(NotificationContext);
 
@@ -40,7 +40,7 @@ function Header() {
 
 ```
 
-#### /!\ Use the created context, not the consumer
+#### /!\ Use the created context, not the consumer /!\
 ```jsx
 const Context = React.createContext(defaultValue);
 

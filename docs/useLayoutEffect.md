@@ -2,7 +2,7 @@
 *Almost the same as useEffect, but fires synchronously after the render phase. Use this to safely read from or write to the DOM*
 
 ```jsx
-import { useRef, useLayoutEffect } from "React";
+import { useRef, useLayoutEffect } from "react";
 
 function ColoredComponent({color}) {
   const ref = useRef();
