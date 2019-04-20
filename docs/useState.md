@@ -1,9 +1,9 @@
-### Classic way
+### Class way
 
 ```JSX
 const initialCount = 0;
 
-class Counter extends React.Component {
+class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = { count: initialCount };
@@ -27,8 +27,11 @@ class Counter extends React.Component {
 ### Hook way
 
 ```JSX
+import { useState } from "React";
+
+const initialCount = 0;
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(initialCount);
 
   return (
     <div>

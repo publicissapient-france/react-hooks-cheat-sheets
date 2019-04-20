@@ -1,4 +1,6 @@
 ```javascript
+import { useState, useRef, useCallback, useEffect } from "React"; 
+
 // let's hide the complexity of listening to hover changes
 function useHover() {
   const [value, setValue] = useState(false); // store the hovered state
