@@ -80,3 +80,7 @@ useImperativeHandle(
     [dependencies]
 )
 ```
+
+## Reusability
+
+###Extract reusable behaviour into custom hooks
