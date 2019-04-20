@@ -29,7 +29,7 @@ function ColoredComponent({color}) {
 ```
 
 ```jsx
-<Component color={"rgb(42, 13, 37)"} />
+<ColoredComponent color={"rgb(42, 13, 37)"} />
 // rgb(42, 13, 37) will always be the same as rgb(42, 13, 37)
 // but rgb(255, 0, 0) can be different from rgb(42, 13, 37) if you play with the DOM
 ```
