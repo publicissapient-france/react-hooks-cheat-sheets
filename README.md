@@ -2,7 +2,7 @@
 
 ## Manage state
 
-### useState
+### [useState](/docs/useState.md)
 
 ```javascript
 const [count, setCount] = useState(initialCount);
