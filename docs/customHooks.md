@@ -8,7 +8,7 @@ function useHover() {
   const handleMouseOver = useCallback(() => setValue(true), []);
   const handleMouseOut = useCallback(() => setValue(false), []);
 
-  // add listeners inside and effect,
+  // add listeners inside an effect,
   // and listen for ref changes to apply the effect again
   useEffect(() => {
     const node = ref.current;
