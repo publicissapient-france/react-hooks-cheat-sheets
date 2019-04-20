@@ -14,7 +14,7 @@ class Counter extends Component {
       <div>
         <p>You clicked {this.state.count} times</p>
         <button
-            onClick={() => this.setState(({c}) => ({ count: c + 1 }))}
+            onClick={() => this.setState(({count}) => ({ count: count + 1 }))}
         >
           Click me
         </button>
