@@ -1,14 +1,16 @@
-# What hooks can do for you
+#React hooks Cheat Sheets
 
-## Manage state
+## What hooks can do for you
 
-### [useState](/docs/useState.md)
+### Manage state
+
+#### [useState](/docs/useState.md)
 
 ```javascript
 const [count, setCount] = useState(initialCount);
 ```
 
-### useReducer
+#### [useReducer](/docs/useReducer.md)
 
 ```javascript
 const [state, dispatch] = useReducer(
@@ -18,9 +20,9 @@ const [state, dispatch] = useReducer(
 );
 ```
 
-## Handling side effects
+### Handling side effects
 
-### useEffect
+#### [useEffect](/docs/useEffect.md)
 
 ```javascript
 useEffect(() => {
@@ -29,7 +31,7 @@ useEffect(() => {
 }, [dependencies]);
 ```
 
-### useLayoutEffect
+#### [useLayoutEffect](/docs/useLayoutEffect.md)
 
 ```javascript
 useLayoutEffect(() => {
@@ -38,17 +40,17 @@ useLayoutEffect(() => {
 }, [dependencies]);
 ```
 
-## Using the Context API
+### Using the Context API
 
-### useContext
+#### [useContext](/docs/useContext.md)
 ```javascript
 const ThemeContext = React.createContext();
 const contextValue = useContext(ThemeContext);
 ```
 
-## Memoize everything
+### Memoize everything
 
-### useMemo
+#### [useMemo](/docs/useMemo.md)
 ```javascript
 const memoizedValue = useMemo(
     expensiveFn(dependencies), 
@@ -56,7 +58,7 @@ const memoizedValue = useMemo(
 );
 ```
 
-### useCallback
+#### [useCallback](/docs/useCallback.md)
 ```javascript
 const memoizedCallback = useCallback(
     () => expensiveFn(dependencies), 
@@ -64,14 +66,14 @@ const memoizedCallback = useCallback(
 );
 ```
 
-## Good ol' refs
+### Good ol' refs
 
-### useRef
+#### [useRef](/docs/useRef.md)
 ```javascript
 const ref = useRef();
 ```
 
-### useImperativeHandle
+#### [useImperativeHandle](/docs/useImperativeHandle.md)
 
 ```javascript
 useImperativeHandle(
@@ -81,6 +83,6 @@ useImperativeHandle(
 )
 ```
 
-## Reusability
+### Reusability
 
-###Extract reusable behaviour into custom hooks
+#### [Extract reusable behaviour into custom hooks](/docs/customHooks.md)
