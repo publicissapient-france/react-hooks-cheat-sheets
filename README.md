@@ -20,7 +20,7 @@ const [state, dispatch] = useReducer(
 );
 ```
 
-### Handling side effects
+### Handle side effects
 
 #### [useEffect](/docs/useEffect.md)
 
@@ -40,7 +40,7 @@ useLayoutEffect(() => {
 }, [dependencies]);
 ```
 
-### Using the Context API
+### Use the Context API
 
 #### [useContext](/docs/useContext.md)
 ```javascript
