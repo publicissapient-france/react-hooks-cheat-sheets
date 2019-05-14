@@ -14,9 +14,9 @@ const [count, setCount] = useState(initialCount);
 
 ```javascript
 const [state, dispatch] = useReducer(
-    reducer, 
-    initialState, 
-    initialDispatch
+  reducer, 
+  initialState, 
+  initialDispatch
 );
 ```
 
@@ -35,7 +35,7 @@ useEffect(() => {
 
 ```javascript
 useLayoutEffect(() => {
-  applyBlockingEffectAfterRender(dependencies);
+  applyBlockingEffect(dependencies);
   return cleanupEffect();
 }, [dependencies]);
 ```
@@ -43,6 +43,7 @@ useLayoutEffect(() => {
 ### Use the Context API
 
 #### [useContext](/docs/useContext.md)
+
 ```javascript
 const ThemeContext = React.createContext();
 const contextValue = useContext(ThemeContext);
@@ -51,24 +52,27 @@ const contextValue = useContext(ThemeContext);
 ### Memoize everything
 
 #### [useMemo](/docs/useMemo.md)
+
 ```javascript
 const memoizedValue = useMemo(
-    () => expensiveFn(dependencies), 
-    [dependencies]  
+  () => expensiveFn(dependencies),
+  [dependencies]  
 );
 ```
 
 #### [useCallback](/docs/useCallback.md)
+
 ```javascript
 const memoizedCallback = useCallback(
-    expensiveFn(dependencies), 
-    [dependencies]
+  expensiveFn(dependencies),
+  [dependencies]
 );
 ```
 
-### Good ol' refs
+### Use refs
 
 #### [useRef](/docs/useRef.md)
+
 ```javascript
 const ref = useRef();
 ```
@@ -77,9 +81,9 @@ const ref = useRef();
 
 ```javascript
 useImperativeHandle(
-    ref, 
-    createHandle, 
-    [dependencies]
+  ref,
+  createHandle,
+  [dependencies]
 )
 ```
 

@@ -2,23 +2,34 @@
 *Allows you to customize the exposed interface of a component when using a ref. The following component will automatically focus the child input when mounted :*
 
 ```jsx
-function ChildInput(props, ref) {
+function TextInput(props, ref) {
   const inputRef = useRef(null);
-  useImperativeHandle(ref, () => inputRef.current);
+  const onBtnClick = () => inputRef.current.focus();
 
-  return <input type="text" name="child input" ref={inputRef} />;
+  useImperativeHandle(ref, () => ({
+    focusInput: () => inputRef.current.focus();
+  });
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={onBtnClick}>Focus the text input</button>
+    </>
+  )
 }
 
+const TextInputWithRef = React.forwardRef(TextInput);
+
 function Parent() {
-  const inputRef = useRef(null);
+  const ref = useRef(null);
 
   useEffect(() => {
-    inputRef.current.focus();
+    ref.focusInput();
   }, []);
 
   return (
     <div>
-      <ChildInput ref={inputRef} />
+      <TextInputWithRef ref={ref} />
     </div>
   );
 }
