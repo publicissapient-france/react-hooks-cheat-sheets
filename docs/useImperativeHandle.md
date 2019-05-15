@@ -11,10 +11,10 @@ function TextInput(props, ref) {
   });
 
   return (
-    <>
+    <Fragment>
       <input ref={inputRef} />
       <button onClick={onBtnClick}>Focus the text input</button>
-    </>
+    </Fragment>
   )
 }
 
