@@ -40,7 +40,7 @@ function Header() {
 
 ```
 
-#### /!\ Use the created context, not the consumer /!\
+#### ⚠️ Use the created context, not the consumer ⚠️
 ```jsx
 const Context = React.createContext(defaultValue);
 
