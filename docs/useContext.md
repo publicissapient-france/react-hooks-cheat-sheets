@@ -11,7 +11,7 @@ class Header extends React.Component {
               <NotificationContext.Consumer>
                 {({ notification, notify }) => {
                   return (
-                    //...
+                    ...
                   )
                 }}
               </NotificationContext.Consumer>
@@ -35,7 +35,7 @@ function Header() {
   const { isOpen, showModal, hideModal } = useContext(ModalContext);
   const { notification, notify } = useContext(NotificationContext);
 
-  return //...
+  return ...
 }
 
 ```
